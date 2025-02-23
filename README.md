@@ -24,6 +24,14 @@ The application lives at https://matts-phonebook.fly.dev/
 
 - start the app locally with `npm run dev`
 
+## Deployment notes
+
+- Make sure that your repository contains `FLY_API_TOKEN` and `DISCORD_WEBHOOK` Actions secrets.
+
+- Make sure that your GitHub Actions workflow permissions are set to **Read and write permissions** (necessary for the tagging action to work properly).
+
+- Data is hosted in a MongoDB database.
+
 ## The _other_ repo
 
 The repository with the Pokedex app, which is used throughout most of Part 11 is located at:  
