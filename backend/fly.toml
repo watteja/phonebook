@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for matts-phonebook on 2024-07-27T16:32:39+02:00
+# fly.toml app configuration file generated for matts-phonebook on 2025-02-23T12:31:06+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -8,8 +8,11 @@ primary_region = 'arn'
 
 [build]
 
+[deploy]
+  strategy = 'canary'
+
 [env]
-  PORT = "3000"
+  PORT = '3000'
 
 [http_service]
   internal_port = 3000
@@ -18,9 +21,6 @@ primary_region = 'arn'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
-
-[deploy]
-  strategy = "canary"
 
 [[vm]]
   memory = '1gb'
